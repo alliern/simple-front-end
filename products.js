@@ -38,7 +38,7 @@ var app = new Vue({
     },
     updateProduct: function () {
       var params ={name: this.name, description: this.description, image_url: this.imageUrl, price: this.price };
-      axios.post("http://localhost:3000/api/products", params).then(response => {
+      axios.patch("http://localhost:3000/api/products/name", params).then(response => {
         console.log(response.data);
         this.products.push(response.data);
         this.name = "";
@@ -50,4 +50,4 @@ var app = new Vue({
 
     }
   }
-});
+,);

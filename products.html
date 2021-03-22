@@ -24,7 +24,8 @@
   Price:
       <input type="text" v-model="price" />
 </br>
-      <button v-on:click="createProduct()">Add Product</button>
+      <button v-on:click="createProduct()">Add a Product</button>
+      <button v-on:click="updateProduct()">Update a Product</button>
       <div v-for="product in products">{{ product }}</div>
     </div>
   </body>
